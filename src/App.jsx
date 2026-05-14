@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import './App.css'
+import './styles/visual.css'
 import { categories } from './data/categories'
 import { products } from './data/products'
 

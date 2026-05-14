@@ -9,24 +9,20 @@
 }
 
 .hero {
-  min-height: 100vh;
-  padding-top: 42px;
-  padding-bottom: 42px;
   background:
-    radial-gradient(circle at 12% 18%, rgba(159, 38, 29, 0.12), transparent 28%),
-    radial-gradient(circle at 88% 82%, rgba(36, 27, 22, 0.08), transparent 30%),
+    radial-gradient(circle at 12% 18%, rgba(159, 38, 29, 0.13), transparent 28%),
+    radial-gradient(circle at 88% 82%, rgba(32, 23, 19, 0.08), transparent 30%),
     linear-gradient(180deg, #fffaf3 0%, #f8f1e7 100%);
 }
 
 .brandLogo {
   width: min(460px, 88vw);
-  border-radius: 28px;
-  box-shadow: 0 24px 60px rgba(36, 27, 22, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(36, 27, 22, 0.14);
 }
 
 .heroText {
   margin-top: 24px;
-  font-size: clamp(1rem, 2vw, 1.18rem);
 }
 
 .button.primary {
@@ -43,7 +39,7 @@
 .quickNav a,
 .showAllButton,
 .backButton {
-  background: rgba(255, 250, 243, 0.88);
+  background: rgba(255, 250, 243, 0.9);
   backdrop-filter: blur(8px);
 }
 
@@ -51,61 +47,29 @@
 .productCard,
 .infoCard,
 .locationCard {
-  background: rgba(255, 250, 243, 0.88);
+  background: rgba(255, 250, 243, 0.9);
   box-shadow: 0 20px 50px rgba(36, 27, 22, 0.08);
 }
 
-.categoryCard:hover,
-.categoryCard.active,
-.productCard:hover,
-.infoCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 60px rgba(159, 38, 29, 0.13);
-}
-
-.productCard,
-.infoCard,
-.locationCard,
-.categoryCard {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
 .productImage {
-  min-height: 250px;
   background:
-    linear-gradient(135deg, rgba(159, 38, 29, 0.16), rgba(36, 27, 22, 0.08)),
+    linear-gradient(135deg, rgba(159, 38, 29, 0.16), rgba(32, 23, 19, 0.08)),
     linear-gradient(180deg, #fffaf3, #f1e2d1);
 }
 
 .productImage span {
   color: var(--color-primary-dark);
-  background: rgba(255, 250, 243, 0.82);
-}
-
-.mapPlaceholder {
-  background:
-    radial-gradient(circle at top left, rgba(159, 38, 29, 0.14), transparent 34%),
-    linear-gradient(135deg, #fffaf3, #f3e3d2);
+  background: rgba(255, 250, 243, 0.84);
 }
 
 .footer {
   background:
-    radial-gradient(circle at top left, rgba(159, 38, 29, 0.2), transparent 32%),
+    radial-gradient(circle at top left, rgba(159, 38, 29, 0.22), transparent 32%),
     #201713;
 }
 
 @media (max-width: 620px) {
-  .hero {
-    padding-top: 28px;
-    padding-bottom: 32px;
-  }
-
   .brandLogo {
     max-width: 320px;
-    border-radius: 22px;
   }
 }

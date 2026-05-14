@@ -609,4 +609,85 @@ h1 {
   .footer {
     padding-bottom: 92px;
   }
+}.quickNav {
+  margin-top: 24px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quickNav a {
+  padding: 9px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-primary);
+  background: rgba(255, 250, 243, 0.75);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.quickNav a:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: rgba(143, 63, 43, 0.08);
+}
+
+.mapPlaceholder {
+  padding: 28px;
+  border: 1px dashed var(--color-border);
+  border-radius: 26px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top left, rgba(143, 63, 43, 0.12), transparent 34%),
+    rgba(247, 241, 232, 0.72);
+}
+
+.mapPlaceholder strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 1.35rem;
+}
+
+.mapPlaceholder span {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.mapPlaceholder p {
+  max-width: 520px;
+  margin: 14px auto 0;
+}
+
+.sectionTools {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .quickNav {
+    justify-content: flex-start;
+  }
+
+  .quickNav a {
+    width: calc(50% - 5px);
+    text-align: center;
+  }
+
+  .sectionTools {
+    width: 100%;
+  }
+
+  .sectionTools .backButton {
+    width: 100%;
+  }
 }

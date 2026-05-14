@@ -5,6 +5,11 @@ import { products } from './data/products'
 
 const WHATSAPP_NUMBER = '5490000000000'
 
+const businessAddress = 'Av. San Martín 2552, Salta Capital, Argentina'
+
+const mapsUrl =
+  'https://www.google.com/maps/search/?api=1&query=Av.%20San%20Mart%C3%ADn%202552%2C%20Salta%20Capital%2C%20Argentina'
+
 const socialLinks = [
   {
     name: 'Instagram',
@@ -88,7 +93,7 @@ function App() {
 
   return (
     <main className="page">
-      <section className="hero">
+      <section className="hero" id="inicio">
         <p className="eyebrow">Regional Andino</p>
 
         <h1>ARTESANÍAS LAU</h1>
@@ -118,6 +123,12 @@ function App() {
             Consultar WhatsApp
           </a>
         </div>
+
+        <nav className="quickNav" aria-label="Navegación rápida">
+  <a href="#sobre">Sobre el local</a>
+  <a href="#envios">Entregas</a>
+  <a href="#ubicacion">Ubicación</a>
+</nav>
 
         <div className="heroSocials">
           <span>También podés encontrarnos en:</span>
@@ -180,9 +191,13 @@ function App() {
         </div>
 
         <div className="sectionTools sectionToolsBottom">
-          <button className="backButton" onClick={scrollToCategories}>
+          <a className="backButton" href="#categorias">
             Ver categorías
-          </button>
+          </a>
+
+          <a className="backButton" href="#inicio">
+            Volver arriba
+          </a>
         </div>
       </section>
 
@@ -230,6 +245,10 @@ function App() {
             <button className="backButton" onClick={scrollToCategories}>
               Volver a categorías
             </button>
+
+            <a className="backButton" href="#inicio">
+              Volver arriba
+            </a>
           </div>
         )}
 
@@ -279,10 +298,187 @@ function App() {
               <button className="backButton" onClick={scrollToCategories}>
                 Volver a categorías
               </button>
+
+              <a className="backButton" href="#inicio">
+                Volver arriba
+              </a>
             </div>
           </>
         )}
       </section>
+
+      <section className="section" id="sobre">
+        <div className="sectionHeader">
+          <p className="eyebrow">Local familiar</p>
+          <h2>Sobre Artesanías Lau</h2>
+          <p>
+            Un espacio en Salta Capital con productos regionales, textiles, mates,
+            artículos para el hogar y opciones seleccionadas para regalo.
+          </p>
+        </div>
+
+        <div className="infoGrid">
+          <article className="infoCard">
+            <h3>Selección regional</h3>
+            <p>
+              Trabajamos con una variedad de artículos tradicionales, textiles,
+              mates, madera, aguayo y productos regionales seleccionados.
+            </p>
+          </article>
+
+          <article className="infoCard">
+            <h3>Consulta directa</h3>
+            <p>
+              Como los modelos, colores y disponibilidad pueden cambiar, recomendamos
+              consultar por WhatsApp antes de visitar o realizar una compra.
+            </p>
+          </article>
+
+          <article className="infoCard">
+            <h3>Productos para regalar</h3>
+            <p>
+              Contamos con opciones para uso personal, decoración, regalos,
+              recuerdos regionales y artículos tradicionales.
+            </p>
+          </article>
+        </div>
+
+        <div className="sectionTools sectionToolsBottom">
+          <a className="backButton" href="#categorias">
+            Ver categorías
+          </a>
+
+          <a className="backButton" href="#inicio">
+            Volver arriba
+          </a>
+        </div>
+      </section>
+
+      <section className="section sectionAlt" id="envios">
+        <div className="sectionHeader">
+          <p className="eyebrow">Consultas y entregas</p>
+          <h2>Entregas y envíos</h2>
+          <p>
+            Realizamos entregas en Salta Capital según zona y disponibilidad.
+            Para envíos fuera de Salta, consultar según producto, cantidad y costo
+            de envío.
+          </p>
+        </div>
+
+        <div className="centerActions">
+          <a
+            href={createWhatsAppLink(
+              'Hola, vi la página de Artesanías Lau y quiero consultar por entregas o envíos.'
+            )}
+            className="button whatsapp"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Consultar entregas por WhatsApp
+          </a>
+        </div>
+
+        <div className="sectionTools sectionToolsBottom">
+          <a className="backButton" href="#ubicacion">
+            Ver ubicación
+          </a>
+
+          <a className="backButton" href="#inicio">
+            Volver arriba
+          </a>
+        </div>
+      </section>
+
+      <section className="section" id="ubicacion">
+        <div className="sectionHeader">
+          <p className="eyebrow">Dónde estamos</p>
+          <h2>Ubicación y horarios</h2>
+          <p>
+            Nos encontrás en Salta Capital. Recomendamos consultar antes de visitar,
+            ya que la disponibilidad de productos puede variar.
+          </p>
+        </div>
+
+        <div className="locationCard">
+          <div>
+            <h3>ARTESANÍAS LAU</h3>
+            <p>{businessAddress}</p>
+          </div>
+
+          <div>
+            <h3>Horario aproximado</h3>
+            <p>9:30 a 20:30. Consultar antes de visitar.</p>
+          </div>
+
+          <div className="mapPlaceholder">
+            <strong>Av. San Martín 2552</strong>
+            <span>Salta Capital</span>
+            <p>
+              Evitamos mostrar una foto automática de Google porque puede no representar
+              bien el local. Usá el botón para abrir la ubicación exacta.
+            </p>
+          </div>
+
+          <div className="locationActions">
+            <a href={mapsUrl} className="button secondary" target="_blank" rel="noreferrer">
+              Cómo llegar
+            </a>
+
+            <a
+              href={createWhatsAppLink(
+                'Hola, vi la página de Artesanías Lau y quiero consultar si están atendiendo.'
+              )}
+              className="button whatsapp"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Consultar si está abierto
+            </a>
+          </div>
+        </div>
+
+        <div className="sectionTools sectionToolsBottom">
+          <a className="backButton" href="#categorias">
+            Ver categorías
+          </a>
+
+          <a className="backButton" href="#inicio">
+            Volver arriba
+          </a>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div>
+          <strong>ARTESANÍAS LAU</strong>
+          <span>Regional Andino</span>
+        </div>
+
+        <p>
+          Catálogo online de productos artesanales, textiles, mates y artículos
+          regionales seleccionados en Salta Capital.
+        </p>
+
+        <div className="footerLinks">
+          <a href="#inicio">Inicio</a>
+          <a href="#destacados">Destacados</a>
+          <a href="#categorias">Categorías</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#envios">Entregas</a>
+          <a href="#ubicacion">Ubicación</a>
+        </div>
+      </footer>
+
+      <a
+        className="floatingWhatsApp"
+        href={createWhatsAppLink(
+          'Hola, vi la página de Artesanías Lau y quiero hacer una consulta.'
+        )}
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
     </main>
   )
 }

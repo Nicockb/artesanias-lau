@@ -465,13 +465,29 @@ function App() {
         </p>
 
         <div className="footerLinks">
-          <a href="#inicio">Inicio</a>
-          <a href="#destacados">Destacados</a>
-          <a href="#categorias">Categorías</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#envios">Entregas</a>
-          <a href="#ubicacion">Ubicación</a>
-        </div>
+  <a href="#inicio">Inicio</a>
+  <a href="#destacados">Destacados</a>
+  <a href="#categorias">Categorías</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#envios">Entregas</a>
+  <a href="#ubicacion">Ubicación</a>
+</div>
+
+<div className="footerSocials">
+  <span>Redes sociales</span>
+
+  <div className="footerSocialLinks">
+    {socialLinks.map((social) => (
+      <a
+        href={social.url}
+        key={social.name}
+        onClick={(event) => handleSocialClick(event, social.url)}
+      >
+        {social.name}
+      </a>
+    ))}
+  </div>
+</div>
       </footer>
 
       <a

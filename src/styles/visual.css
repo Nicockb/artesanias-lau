@@ -807,4 +807,112 @@ body {
     inset: 12px;
     border-radius: 26px;
   }
+}/* MOBILE: ocultar botones superiores dentro del catálogo */
+
+@media (max-width: 620px) {
+  #productos > .sectionTools:not(.sectionToolsBottom) {
+    display: none !important;
+  }
+}/* REDES EN FOOTER */
+
+.footerSocials {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.footerSocials span {
+  color: #e2d2c1;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+}
+
+.footerSocialLinks {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerSocialLinks a {
+  padding: 9px 13px;
+  border-radius: 999px;
+  color: #fff7ec;
+  background: rgba(255, 247, 236, 0.08);
+  border: 1px solid rgba(255, 247, 236, 0.16);
+  font-size: 0.86rem !important;
+  font-weight: 800 !important;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footerSocialLinks a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 247, 236, 0.14);
+}
+
+@media (max-width: 620px) {
+  .footerSocialLinks {
+    width: 100%;
+  }
+
+  .footerSocialLinks a {
+    flex: 1;
+    text-align: center;
+    min-width: 92px;
+  }
+}/* AJUSTE FOOTER: redes más separadas y ordenadas */
+
+.footerSocials {
+  margin-top: 18px !important;
+  display: grid !important;
+  gap: 18px !important;
+  justify-items: center !important;
+}
+
+.footerSocials span {
+  display: block;
+  margin-bottom: 2px;
+  color: #e2d2c1 !important;
+  font-size: 0.78rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase;
+}
+
+.footerSocialLinks {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerSocialLinks a {
+  padding: 10px 18px !important;
+  min-width: 116px;
+  text-align: center;
+  border-radius: 999px;
+  color: #fff7ec !important;
+  background: rgba(255, 247, 236, 0.08);
+  border: 1px solid rgba(255, 247, 236, 0.18);
+  font-size: 0.88rem !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 620px) {
+  .footerSocials {
+    margin-top: 20px !important;
+    gap: 14px !important;
+  }
+
+  .footerSocialLinks {
+    width: 100%;
+    gap: 10px !important;
+  }
+
+  .footerSocialLinks a {
+    flex: 1;
+    min-width: 95px;
+  }
 }

@@ -104,7 +104,7 @@ function App() {
 <h1 className="srOnly">ARTESANÍAS LAU - Regional Andino</h1>
 
 <p className="heroText">
-  Productos artesanales, textiles, mates y artículos regionales seleccionados
+  Catálogo de productos regionales, textiles, mates y artesanías seleccionadas
   en Salta Capital.
 </p>
 
@@ -114,7 +114,7 @@ function App() {
           </a>
 
           <a href="#categorias" className="button secondary">
-            Ver categorías
+            Ver catalogo
           </a>
 
           <a
@@ -311,7 +311,7 @@ function App() {
           </>
         )}
       </section>
-
+      
       <section className="section" id="sobre">
         <div className="sectionHeader">
           <p className="eyebrow">Local familiar</p>

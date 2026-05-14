@@ -444,3 +444,169 @@ h1 {
     width: 100%;
   }
 }
+.infoGrid {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.infoCard {
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  background: rgba(255, 250, 243, 0.78);
+  box-shadow: 0 18px 40px rgba(36, 27, 22, 0.06);
+}
+
+.infoCard h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.infoCard p {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.centerActions {
+  display: flex;
+  justify-content: center;
+}
+
+.locationCard {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 34px;
+  background: rgba(255, 250, 243, 0.78);
+  box-shadow: 0 18px 40px rgba(36, 27, 22, 0.06);
+}
+
+.locationCard h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.locationCard p {
+  margin: 10px 0 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.locationActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding: 42px 20px 90px;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+  color: var(--color-muted);
+  background: #241b16;
+}
+
+.footer strong {
+  display: block;
+  color: white;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+}
+
+.footer span {
+  display: block;
+  margin-top: 6px;
+  color: #e2d2c1;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  max-width: 560px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerLinks a {
+  color: #fffaf3;
+  font-weight: 700;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+.floatingWhatsApp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  padding: 13px 18px;
+  border-radius: 999px;
+  color: white;
+  background: #2f7d46;
+  box-shadow: 0 14px 34px rgba(47, 125, 70, 0.35);
+  font-weight: 900;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.floatingWhatsApp:hover {
+  background: #256739;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 980px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .centerActions {
+    justify-content: flex-start;
+  }
+
+  .centerActions .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .locationCard {
+    padding: 24px;
+  }
+
+  .locationActions {
+    width: 100%;
+  }
+
+  .locationActions .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .floatingWhatsApp {
+    right: 14px;
+    left: 14px;
+    bottom: 14px;
+    text-align: center;
+  }
+
+  .footer {
+    padding-bottom: 92px;
+  }
+}

@@ -94,14 +94,18 @@ function App() {
   return (
     <main className="page">
       <section className="hero" id="inicio">
-        <p className="eyebrow">Regional Andino</p>
+       <img
+  src="/logo-artesanias-lau.png"
+  alt="ARTESANÍAS LAU - Regional Andino"
+  className="brandLogo"
+/>
 
-        <h1>ARTESANÍAS LAU</h1>
+<h1 className="srOnly">ARTESANÍAS LAU - Regional Andino</h1>
 
-        <p className="heroText">
-          Productos artesanales, textiles, mates y artículos regionales seleccionados
-          en Salta Capital.
-        </p>
+<p className="heroText">
+  Productos artesanales, textiles, mates y artículos regionales seleccionados
+  en Salta Capital.
+</p>
 
         <div className="heroActions">
           <a href="#destacados" className="button primary">

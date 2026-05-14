@@ -915,4 +915,38 @@ body {
     flex: 1;
     min-width: 95px;
   }
+}/* MOBILE: centrar bien el inicio en celulares reales */
+
+@media (max-width: 620px) {
+  .hero {
+    align-items: center !important;
+    text-align: center !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .brandLogo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .heroText {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .heroActions {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-items: center !important;
+  }
+
+  .heroActions .button {
+    width: 100% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
 }
